@@ -1,0 +1,13 @@
+{
+"short_name": "Markuss app",
+"name": "Markuss app (add to homescreen test page)",
+  "display": "standalone",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+ "icons":[{
+"src": "apple-touch-icon.png",
+          "sizes": "any",
+          "type": "image/png",
+          "purpose": "any"
+ }]
+}
