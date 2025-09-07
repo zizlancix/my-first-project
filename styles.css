@@ -21,3 +21,36 @@ color: rgb(66, 66, 230);
   border-radius: 5px;
   cursor: pointer;
 }
+
+.toast {
+  display: none;              /* hidden by default */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 13px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 250px;
+  z-index: 9999;
+}
+ 
+/* small icon */
+.toast img {
+  width: 24px;
+  height: 24px;
+}
+ 
+/* close button */
+.toast .close-btn {
+  margin-left: auto;
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+}
