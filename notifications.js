@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => { 
-const toast = document.getElementById('car-toast');
+document.addEventListener('DOMContentLoaded', () => {
+  const toast = document.getElementById('car-toast');
   const closeBtn = toast.querySelector('.close-btn');
  
- 
-// Helper to show toast
+  // Helper to show toast
   function showToast() {
     toast.style.display = 'flex';
     toast.style.opacity = '1';
     toast.style.transform = 'translateY(0)';
-  // Auto-hide after 5 seconds
+ 
+    // Auto-hide after 5 seconds
     setTimeout(() => {
       toast.style.opacity = '0';
       toast.style.transform = 'translateY(-10px)';
@@ -17,11 +17,11 @@ const toast = document.getElementById('car-toast');
       }, 300);
     }, 5000);
   }
-
-                          // ask for browzer notification premission
+ 
+  // Ask for browser notification permission
   if ('Notification' in window) {
-    Notification.rewuestPremission().then (premission =>  {
-      if (preission === 'granted') {
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
         setTimeout(() => {
           // Show toast
           showToast();
@@ -33,14 +33,15 @@ const toast = document.getElementById('car-toast');
           });
         }, 2000); // 2s delay before showing
       } else {
-        // if browzer doesnt support notfications, just show toast
-      setTimeout(showToast, 2000);
+        // If denied, still show the small toast
+        setTimeout(showToast, 2000);
       }
-      }).catch(err => console.error('Notification permission error:', err));
+    }).catch(err => console.error('Notification permission error:', err));
   } else {
     // If browser doesn't support notifications, just show toast
     setTimeout(showToast, 2000);
   }
+ 
   // Close button
   closeBtn.addEventListener('click', () => {
     toast.style.opacity = '0';
