@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip with Video Example</title>
+<style>
+
+  .my-tooltip {
+
+    position: relative;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: black;
+
+  }
+ 
+  .my-tooltip .my-tooltiptext {
+
+    visibility: hidden;
+
+    width: 200px;
+
+    background-color: black;
+
+    color: #fff;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    padding: 5px;
+
+    position: absolute;
+
+    z-index: 1;
+
+    bottom: 125%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+
+  }
+ 
+  .my-tooltip:hover .my-tooltiptext {
+
+    visibility: visible;
+
+    opacity: 1;
+
+  }
+ 
+  iframe {
+
+    margin-top: 30px;
+
+    width: 560px;
+
+    height: 315px;
+
+    border: none;
+
+  }
+</style>
+</head>
+<body>
+ 
+<h2>Hover over the word:</h2>
+ 
+<center><div class="my-tooltip">Hover me
+<span class="my-tooltiptext">Hello! I'm a tooltip.</span>
+</div></center>
+ 
+<!-- Video iframe -->
+<center><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></center>
+ 
+</body>
+</html>
+
+YouTube
+ 
