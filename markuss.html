@@ -112,15 +112,24 @@ color: white;
 padding-left: 500px;
 transform:translateX(100%);
 animation: slide-left 360s linear infinite;
+animation-timing-function: ease-in-out;
 
+ 
 }
 @keyframes slide-left {
-from{transform: translateX(100%);
+      from {
+        transform: translateX(100%);   /* start just outside right edge */
+      }
+      to {
+        transform: translateX(-100%);  /* end just outside left edge */
+      }
+    }
+ 
 
-}
-to{transform:translateX(-100%);}
-}
 .ticket-wrap:hover .ticker {animation-play-state: paused  ;}
+   
+
+ 
 
 
 
