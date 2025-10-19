@@ -82,10 +82,57 @@
 </div></center>
  
 <!-- Video iframe -->
-<center><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe></center>
- 
+<center><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen>Youtube</iframe></center>
+ <p class="fade-text">hello</p>
+<style>
+.fade-text {
+font-size: 24px;
+animation:fadeInOut 3s infinite;}
+@keyframes fadeInOut {0%, 100% {opacity:0;} 50% {opacity: 1;}}
+</style>
+
+<div class="ticker-wrap">
+<div class="ticker">This text will slide all the way across the page — repeat: infinite!</div>
+</div>
+ <style>
+.ticker-wrap {
+position: relative;
+width: 100%;
+height: 40px;
+overflow:hidden;
+background: #111;
+display: flex;
+align-items: center;
+}
+.ticker{
+position: absolute;
+white-space: nowrap;
+font-size: 20px;
+color: white;
+padding-left: 100px;
+transform:translateX(100%);
+animation: slide-left 10s linear infinite;
+
+}
+@keyframes slide-left {
+from{transform: translateX(100%);
+
+}
+to{transform:translateX(-100%);}
+}
+.ticket-wrap:hover .ticker {animation-play-state: paused  ;}
+
+
+
+ </style>
+
+
+
+
+
+
 </body>
 </html>
 
-YouTube
+
  
